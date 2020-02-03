@@ -1,6 +1,7 @@
-*.pyc
 staticfiles
-*.db
 venv
 media
+*.pyc
+*.db
+*.sqlite3
 *.env
