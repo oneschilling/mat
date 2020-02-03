@@ -1,0 +1,6 @@
+*.pyc
+staticfiles
+*.db
+venv
+media
+*.env
