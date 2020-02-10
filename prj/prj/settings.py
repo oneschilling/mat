@@ -135,6 +135,7 @@ STATICFILES_DIRS = (
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # -- BEGIN # django-allauth settings ##
 
@@ -145,7 +146,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
 # ACCOUNT_LOGOUT_ON_GET = True
-# ACCOUNT_CONFIRM_EMAIL_ON_GET = True
+ACCOUNT_CONFIRM_EMAIL_ON_GET = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
 ACCOUNT_SESSION_COOKIE_AGE = 60*60*24*30*3  # 3 months
@@ -153,6 +154,7 @@ ACCOUNT_SESSION_COOKIE_AGE = 60*60*24*30*3  # 3 months
 # set custom login form
 ACCOUNT_FORMS = {
     'login': 'forms.CustomLoginForm',
+    'signup': 'forms.CustomSignupForm',
 }
 
 AUTHENTICATION_BACKENDS = (

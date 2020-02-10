@@ -7,7 +7,7 @@ from crispy_forms.layout import Submit, Div
 
 class CustomLoginForm(forms.LoginForm):
     """
-    Custom Login form that removed the labels from the form.
+    Custom login form that removed the labels from the form.
 
     """
 
@@ -17,3 +17,18 @@ class CustomLoginForm(forms.LoginForm):
 
         self.fields['login'].label = False
         self.fields['password'].label = False
+
+
+class CustomSignupForm(forms.SignupForm):
+    """
+    Custom signup form that removed the labels from the form.
+
+    """
+
+    def __init__(self, *args, **kwargs):
+        super(CustomSignupForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper(self)
+
+        self.fields['email'].label = False
+        self.fields['password1'].label = False
+        self.fields['password2'].label = False
