@@ -145,7 +145,7 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_USERNAME_REQUIRED = False
-# ACCOUNT_LOGOUT_ON_GET = True
+ACCOUNT_LOGOUT_ON_GET = True
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
@@ -155,6 +155,8 @@ ACCOUNT_SESSION_COOKIE_AGE = 60*60*24*30*3  # 3 months
 ACCOUNT_FORMS = {
     'login': 'forms.CustomLoginForm',
     'signup': 'forms.CustomSignupForm',
+    'reset_password': 'forms.CustomResetPasswordForm',
+    'reset_password_from_key': 'forms.CustomResetPasswordKeyForm',
 }
 
 AUTHENTICATION_BACKENDS = (

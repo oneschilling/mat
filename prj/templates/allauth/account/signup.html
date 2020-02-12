@@ -4,13 +4,13 @@
 {% load i18n %}
 {% load crispy_forms_tags %}
 
-{% block head_title %}{% trans "Sign Up" %}{% endblock %}
+{% block extra_body_tag %}class="text-center"{% endblock %}
 
 {% block extra_head %}
 <link rel="stylesheet" href="{% static 'css/signup.css' %}" crossorigin="anonymous">
 {% endblock %}
 
-{% block extra_body_tag %}class="text-center"{% endblock %}
+{% block head_title %}{% trans "Sign Up" %}{% endblock %}
 
 {% block content %}
 
