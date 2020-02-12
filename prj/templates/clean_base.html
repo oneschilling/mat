@@ -16,15 +16,7 @@
     {% block body %}
 
     <div class="container">
-        {% if messages %}
-        <div >
-            {% for message in messages %}
-            <div class="alert alert-success alert-signin" role="alert">
-              {{ message }}
-            </div>
-            {% endfor %}
-            <br>
-        {% endif %}
+        {% include "messages.html" %}
 
         {% block content %}
         {% endblock %}
