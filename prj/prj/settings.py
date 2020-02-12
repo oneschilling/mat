@@ -153,10 +153,12 @@ ACCOUNT_SESSION_COOKIE_AGE = 60*60*24*30*3  # 3 months
 
 # set custom login form
 ACCOUNT_FORMS = {
-    'login': 'forms.CustomLoginForm',
-    'signup': 'forms.CustomSignupForm',
-    'reset_password': 'forms.CustomResetPasswordForm',
-    'reset_password_from_key': 'forms.CustomResetPasswordKeyForm',
+    'login': 'prj.forms.CustomLoginForm',
+    'signup': 'prj.forms.CustomSignupForm',
+    'reset_password': 'prj.forms.CustomResetPasswordForm',
+    'reset_password_from_key': 'prj.forms.CustomResetPasswordKeyForm',
+    'change_password': 'prj.forms.CustomChangePasswordForm',
+    'add_email': 'prj.forms.CustomAddEmailForm',
 }
 
 AUTHENTICATION_BACKENDS = (

@@ -59,3 +59,31 @@ class CustomResetPasswordKeyForm(forms.ResetPasswordKeyForm):
 
         self.fields['password1'].label = False
         self.fields['password2'].label = False
+
+
+class CustomChangePasswordForm(forms.ChangePasswordForm):
+    """
+    Custom change password from that removes the labels from the form.
+
+    """
+
+    def __init__(self, *args, **kwargs):
+        super(CustomChangePasswordForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper(self)
+
+        self.fields['oldpassword'].label = False
+        self.fields['password1'].label = False
+        self.fields['password2'].label = False
+
+
+class CustomAddEmailForm(forms.AddEmailForm):
+    """
+    Custom add email form that removes the labels from the form.
+
+    """
+
+    def __init__(self, *args, **kwargs):
+        super(CustomAddEmailForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper(self)
+
+        self.fields['email'].label = False
